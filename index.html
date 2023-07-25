@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+<style type="text/css">
+    body{
+        margin:0;
+        padding:0;
+        background:url('https://www.srifcu.org/wp-content/uploads/2016/10/Christmas-lights-on-empty-table-Background-Defocused-Blue-wood-627683252_2296x1311.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        backdrop-filter: blur(20px);
+    }
+
+    .clock-show{
+        display:flex;
+        position:absolute;
+        transform:translate(-50%, -50%);
+        left:50%; 
+        top:20rem; 
+        width:50%;
+        border-radius:10px;
+        background: rgb(22, 21, 21);
+        padding: 3rem;
+    }
+
+    .deep-show{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column; 
+        width:100%;
+        border: 20px inset rgba(62, 60, 60, 0.733);
+        border-radius:20px;
+        background: rgb(22, 21, 21);
+        box-shadow:5px 50px 40px black;
+    }
+
+    .time{
+        background:linear-gradient(rgb(127, 127, 167),rgb(255, 255, 255),rgb(120, 120, 172));
+        background-clip:text;
+        -webkit-background-clip: text;
+        color:transparent;
+        text-shadow: 5px 5px 40px #03ff00;
+        font-size:6rem;
+    }
+
+    @media (max-width: 1000px){
+        .clock-show{
+            width: 30%;
+            padding: 1rem;
+        }
+
+        .time{
+            font-size: 2rem;
+        }
+    }
+
+    /* @media (max-height: 400px){
+        .clock-show{
+            height:15%;
+            width: 20%;
+            padding: 1rem;
+        }
+
+        #t{
+            font-size: 1rem;
+        }
+    } */
+</style>
+
+<script type="text/javascript">
+    function show(){
+        d=new Date();
+        h=d.getHours();
+        m=d.getMinutes();
+        s=d.getSeconds();
+        am_pm = "AM";
+
+        if (h >= 12) {
+            if (h > 12) hour -= 12;
+            am_pm = "PM";
+        } else if (h == 0) {
+            hr = 12;
+            am_pm = "AM";
+        }
+ 
+    hour =
+        h < 10 ? "0" + h : h;
+    min = m < 10 ? "0" + m : m;
+    sec = s < 10 ? "0" + s : s;
+ 
+    let currentTime =hour +":" +min +":" +sec +am_pm;
+        document.getElementById('t').innerHTML=currentTime;
+        setTimeout('show()',1000);
+    }
+</script>
+
+</head>
+<body onload="show()">
+    <div class="clock-show">
+        <span class="deep-show">
+            <h1 id="t" class="time"> </h1>
+        </span>
+    </div>
+
+
+    
+</body>
+</html>
