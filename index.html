@@ -29,7 +29,7 @@
     }
 
 
-    #t{
+    .time{
         background: linear-gradient(rgb(127, 127, 167),rgb(255, 255, 255),rgb(120, 120, 172));
         background-clip: text;
         -webkit-background-clip: text;
@@ -38,8 +38,8 @@
         font-size: 6rem;
     }
 
-    @media (max-width:600px){
-        h1{
+    @media all and (max-width:768px){
+        .time{
             font-size: 1.5rem;
         }
     }
@@ -75,7 +75,7 @@
 </head>
 <body onload="show()">
     <div class="clock-show">
-            <h1 id="t"> </h1>
+            <h1 class="time" id="t"> </h1>
     </div>
 </body>
 </html>
