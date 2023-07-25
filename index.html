@@ -15,30 +15,21 @@
 
     .clock-show{
         display: flex;
-        position:absolute;
+        position: absolute;
         justify-content: center;
         align-items: center;
         transform: translate(-50%, -50%);
         left: 50%; 
         top: 50%; 
         width: 70%;
-        border-radius: 10px;
-        background: rgb(22, 21, 21);
-        padding: 2rem;
-    }
-
-    .deep-show{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width:100%;
         border: 20px inset rgba(62, 60, 60, 0.733);
         border-radius: 20px;
         background: rgb(22, 21, 21);
         box-shadow:5px 50px 40px black;
     }
 
-    .time{
+
+    #t{
         background: linear-gradient(rgb(127, 127, 167),rgb(255, 255, 255),rgb(120, 120, 172));
         background-clip: text;
         -webkit-background-clip: text;
@@ -78,12 +69,7 @@
 </head>
 <body onload="show()">
     <div class="clock-show">
-        <span class="deep-show">
-            <h1 id="t" class="time"> </h1>
-        </span>
+            <h1 id="t"> </h1>
     </div>
-
-
-    
 </body>
 </html>
