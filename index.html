@@ -5,46 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Clock</title>
 <style type="text/css">
-    body{
+    *{
         margin:0;
         padding:0;
-        background:url('https://www.srifcu.org/wp-content/uploads/2016/10/Christmas-lights-on-empty-table-Background-Defocused-Blue-wood-627683252_2296x1311.jpeg');
+    }
+    body{
+        background: url('https://www.srifcu.org/wp-content/uploads/2016/10/Christmas-lights-on-empty-table-Background-Defocused-Blue-wood-627683252_2296x1311.jpeg');
         background-repeat: no-repeat;
-        background-size:cover;
+        background-size: 100%;
         backdrop-filter: blur(20px);
     }
 
     .clock-show{
-        display:flex;
+        display: flex;
         position:absolute;
-        transform:translate(-50%, -50%);
-        left:50%; 
-        top:20rem; 
-        width:50%;
-        border-radius:10px;
+        transform: translate(-50%, -50%);
+        left: 50%; 
+        top: 50%; 
+        width: 50%;
+        border-radius: 10px;
         background: rgb(22, 21, 21);
         padding: 3rem;
     }
 
     .deep-show{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        flex-direction:column; 
+        display: flex;
+        justify-content: center;
+        align-items: center; 
         width:100%;
         border: 20px inset rgba(62, 60, 60, 0.733);
-        border-radius:20px;
+        border-radius: 20px;
         background: rgb(22, 21, 21);
         box-shadow:5px 50px 40px black;
     }
 
     .time{
-        background:linear-gradient(rgb(127, 127, 167),rgb(255, 255, 255),rgb(120, 120, 172));
-        background-clip:text;
+        background: linear-gradient(rgb(127, 127, 167),rgb(255, 255, 255),rgb(120, 120, 172));
+        background-clip: text;
         -webkit-background-clip: text;
-        color:transparent;
+        color: transparent;
         text-shadow: 5px 5px 40px #03ff00;
-        font-size:6rem;
+        font-size: 6rem;
     }
 
     @media (max-width: 1000px){
